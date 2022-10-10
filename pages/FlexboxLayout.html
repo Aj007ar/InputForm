@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width,initial-scale=1.0">   
+    <title>Flexbox Layout</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin:0;
+        }
+        header{
+            margin: 0;
+            padding: 20px 0;
+            color: rgb(218, 23, 120); 
+            text-shadow: 4px 4px 4px black; 
+            text-align: center;
+            font-size: xx-large;
+        }
+        #main{
+            display: flex;
+            min-height: calc(100vh-40vh);
+        }
+        #main>article
+        {
+            flex: 1;
+        }
+        #main>nav,
+        #main>aside{
+            flex: 0 0 20vw;
+            background: bisque;
+        }
+        #main>nav{
+            order: -1;
+        }
+        article,nav,aside{
+            padding: 15em;
+        }
+        header,footer{
+            background: yellowgreen;
+            height: 10vh;
+        }
+    </style>
+ </head>
+ <body>
+    <header>BRIDGELABZ</header>
+    <div id="main">
+        <article>Article</article>
+        <nav>Nav</nav>
+        <aside>Aside</aside>
+    </div>
+    <footer>Footer</footer>
+ </body>
