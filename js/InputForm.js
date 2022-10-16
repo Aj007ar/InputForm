@@ -35,3 +35,26 @@
                 teleError.textContent = "Mobile number is not valid"
             }
         }); 
+        //UC4-5 Password Validation
+        //validate Password field using regexp.
+        const pwd = document.querySelector('#pass');
+        const passwordEror = document.querySelector('.pwd-error');
+        pwd.addEventListener('input',function(){
+        let passwordRegex = RegExp("^(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[!@#$%^&*()_+=-]).{8,}$");
+        if (passwordRegex.test(pwd.value))
+        {
+            passwordEror.textContent = ""
+        }
+        else
+        {
+            passwordEror.textContent = "Password is incorrect"
+        }
+        });
+
+        const salary = document.querySelector('#salary')
+        const output = document.querySelector('.salary-output')
+        output.textContent = salary.value;
+        salary.addEventListener('input', function ()
+        {
+            output.textContent = salary.value
+        });
